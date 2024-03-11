@@ -2,7 +2,7 @@ locals {
   workspaces_suffix = terraform.workspace == "default" ? "" : "${terraform.workspace}"
 
   rg_name        = "${var.rg_name}-${local.workspaces_suffix}"
-  source_content = "${var.source_content}: ${local.workspaces_suffix}</h1>"
+  source_content = "<h1>${var.source_content}: ${local.workspaces_suffix}</h1>"
 }
 
 resource "random_string" "random_string" {
