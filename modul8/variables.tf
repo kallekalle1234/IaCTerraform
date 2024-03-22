@@ -11,12 +11,12 @@ variable "rg_location" {
 variable "sa_name" {
   type        = string
   description = "Name of the storage account"
-  default     = "sawswebopg8"
+  default     = "sawswebo8"
 }
 variable "source_content" {
   type        = string
   description = "Source content for the index.html file"
-  default     = "Web page created with Terraform"
+  default     = "Web page created with Terraform - CI/CD"
 }
 variable "index_document" {
   type        = string
