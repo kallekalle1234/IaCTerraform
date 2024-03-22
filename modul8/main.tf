@@ -2,7 +2,7 @@ locals {
   workspaces_suffix = terraform.workspace == "default" ? "" : "${terraform.workspace}"
 
   rg_name        = terraform.workspace == "default" ? "${var.rg_name}" : "${var.rg_name}-${local.workspaces_suffix}"
-  sa_name        = terraform.workspace == "default" ? "${var.sa_name}" : "${var.sa_name}-${local.workspaces_suffix}"
+  sa_name        = terraform.workspace == "default" ? "${var.sa_name}" : "${var.sa_name}${local.workspaces_suffix}"
   source_content = terraform.workspace == "default" ? "<h1>${var.source_content}</h1>" : "<h1>${var.source_content}: ${local.workspaces_suffix}</h1>"
 }
 
